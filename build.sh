@@ -1,2 +1,5 @@
-#!/usr/bin/env bash
-dotnet build ConsoleApp1 --configuration Debug
+#!/bin/bash
+set -ev
+dotnet restore
+dotnet test
+dotnet build -c Release
