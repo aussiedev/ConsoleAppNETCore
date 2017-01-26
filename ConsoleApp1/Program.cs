@@ -10,6 +10,7 @@ namespace ConsoleApp1
         public static void Main(string[] args)
         {
             Console.WriteLine("This is hello from .NET Core");
+            Console.WriteLine("This is second hello from .NET Core!");
             Console.ReadLine();
 
         }
