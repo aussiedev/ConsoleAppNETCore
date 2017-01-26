@@ -1,2 +1,2 @@
 #!/usr/bin/env bash
-dotnet restore && dotnet build **/project.json
+dotnet build ConsoleApp1 --configuration Debug
