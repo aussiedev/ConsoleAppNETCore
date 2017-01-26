@@ -1,20 +1,9 @@
 #.travis.yml
 
 language: csharp
-
-branches:
-  only:
-    - master
-
-solution: ConsoleApp1.sln
-
-install:
-  - nuget restore ConsoleApp1.sln
-
+dist: trusty
+sudo: required
+mono: none
+dotnet: 1.0.0-preview2-003121
 script:
-  - xbuild /p:Configuration=Release ConsoleApp1.sln
-
-notifications:
-  email:
-    on_failure: change
-    on_success: change
+  - ./build.sh --quiet verify
