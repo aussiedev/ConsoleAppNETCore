@@ -1,0 +1,20 @@
+#.travis.yml
+
+language: csharp
+
+branches:
+  only:
+    - master
+
+solution: ConsoleApp1.sln
+
+install:
+  - nuget restore ConsoleApp1.sln
+
+script:
+  - xbuild /p:Configuration=Release ConsoleApp1.sln
+
+notifications:
+  email:
+    on_failure: change
+    on_success: change
